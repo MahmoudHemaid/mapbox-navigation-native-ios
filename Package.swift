@@ -17,12 +17,11 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(name: "MapboxCommon", url: "https://github.com/mapbox/mapbox-common-ios.git", .upToNextMajor(from: mapboxCommonVersion)),
     ],
     targets: [
         .target(
             name: "MapboxNavigationNativeWrapper",
-            dependencies: ["MapboxCommon", "MapboxNavigationNative"]
+            dependencies: ["MapboxNavigationNative"]
         ),
         .binaryTarget(
             name: "MapboxNavigationNative",
